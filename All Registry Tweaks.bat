@@ -1,5 +1,8 @@
 @echo off
-echo Installing All Reg Tweaks...
+echo This script should be run only as admin if you haven't opened this page as admin leave and reopen it as admin so it will work
+pause
+
+echo Installing All Registry Tweaks...
 
 echo Minimal Processes...
 reg add "HKLM\SYSTEM\CurrentControlSet\Control" /v "SvcHostSplitThresholdInKB" /t REG_DWORD /d "4000000" /f
