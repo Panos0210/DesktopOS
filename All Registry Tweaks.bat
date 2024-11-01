@@ -105,7 +105,7 @@ echo Geting Rid of Bing Suggestions from the Start Menu...
 reg add "HKCU\Software\Policies\Microsoft\Windows\Explorer" /v "DisableSearchBoxSuggestions" /t REG_DWORD /d "1" /f
 
 pause
-Now it is going to uninstall Microsoft Edge to continue press any key to leave close this window
+echo Now it is going to uninstall Microsoft Edge to continue press any key to leave close this window
 pause
 
 echo Removing Edge...
