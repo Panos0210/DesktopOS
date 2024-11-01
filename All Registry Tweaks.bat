@@ -57,7 +57,7 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power\PowerThrottling" /v "PowerT
 
 
 echo Disabling OneDrive...
-#reg add "HKCU\Software\Microsoft\OneDrive" /v "DisableFileSyncNGSC" /t REG_DWORD /d "1"
+reg add "HKCU\Software\Microsoft\OneDrive" /v "DisableFileSyncNGSC" /t REG_DWORD /d "1" /f
 
 
 echo Enable Only Security Updates...
