@@ -5,14 +5,14 @@ this is a lightwaeight version of windows made by me with the ntlite config file
 it also includes a registry edit bat file thaty changes somethings in the registry and improve windows 11
 
 
-to run the registry edit file on any computer and it will always be updated run this command in powershell as admin (if you want the source code go [here](https://raw.githubusercontent.com/Panos0210/DesktopOS/refs/heads/main/All%20Tweaks.bat))
+to run the registry edit file on any computer and it will always be updated run this command in powershell as admin (if you want the source code go [here](https://raw.githubusercontent.com/Panos0210/DesktopOS/refs/heads/main/All%20Registry%20Tweaks.bat))
 ```
-iwr -useb "https://is.gd/regedits11" -OutFile "$env:TEMP\reg.bat"; Start-Process "cmd.exe" -ArgumentList "/c `"$env:TEMP\reg.bat`""
+iwr -useb "https://is.gd/regedits" -OutFile "$env:TEMP\reg.bat"; Start-Process "cmd.exe" -ArgumentList "/c `"$env:TEMP\reg.bat`""
 ```
 
 or if for whatever reason dont want to use that one bc it has an is.gd link and you dont know eher it could redirect
 ```
-iwr -useb "https://raw.githubusercontent.com/Panos0210/DesktopOS/refs/heads/main/All%20Tweaks.bat" -OutFile "$env:TEMP\reg.bat"; Start-Process "cmd.exe" -ArgumentList "/c `"$env:TEMP\reg.bat`""
+iwr -useb "https://raw.githubusercontent.com/Panos0210/DesktopOS/refs/heads/main/All%20Registry%20Tweaks.bat" -OutFile "$env:TEMP\reg.bat"; Start-Process "cmd.exe" -ArgumentList "/c `"$env:TEMP\reg.bat`""
 ```
 
 credits to dave Kirkwood (heytulsiprasad no github) for the [removing edge script](https://gist.github.com/heytulsiprasad/670b7451a1931cfd354c4813c74ac181)
