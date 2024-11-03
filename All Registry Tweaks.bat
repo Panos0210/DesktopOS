@@ -3,9 +3,6 @@ echo This script should be run only as admin if you haven't opened this page as 
 pause
 
 echo Installing All Registry Tweaks...
-
-echo Minimal Processes...
-reg add "HKLM\SYSTEM\CurrentControlSet\Control" /v "SvcHostSplitThresholdInKB" /t REG_DWORD /d "4000000" /f
  
 
 echo Disabling Automatic App Instalation...
