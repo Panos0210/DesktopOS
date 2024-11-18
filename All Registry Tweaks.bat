@@ -203,7 +203,7 @@ exit /B 0
 
 
 pause
-The pc should restart after yo continue if it doesn't then do it manually
+echo The pc should restart after yo continue if it doesn't then do it manually
 pause
 shutdown /r /t 0
 
