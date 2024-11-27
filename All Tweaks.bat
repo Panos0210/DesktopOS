@@ -195,5 +195,10 @@ exit /B 0
 pause
 echo The pc should restart after you continue if it doesn't then do it manually
 pause
+taskkill /f /im explorer.exe
+/wait
+start explorer.exe
+pause
+
 shutdown /r /t 5
 
