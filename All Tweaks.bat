@@ -195,7 +195,7 @@ exit /B 0
 
 
 pause
-echo The pc should restart after yo continue if it doesn't then do it manually
+echo The pc should restart after you continue if it doesn't then do it manually
 pause
-shutdown /r /t 0
+shutdown /r /t 5
 
