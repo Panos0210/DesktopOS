@@ -6,8 +6,7 @@ echo Installing All Tweaks...
  
 
 echo Installing Winget...
-Invoke-WebRequest -Uri https://aka.ms/getwinget -OutFile winget.msixbundle
-Add-AppxPackage .\winget.msixbundle
+powershell -NoProfile -ExecutionPolicy Bypass -Command "Invoke-WebRequest -Uri https://aka.ms/getwinget -OutFile winget.msixbundle; Add-AppxPackage .\winget.msixbundle; Remove-Item -Force .\winget.msixbundle"
 rm winget.msixbundle
 
 echo Disabling Automatic App Instalation...
