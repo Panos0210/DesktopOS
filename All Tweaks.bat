@@ -189,7 +189,7 @@ if exist %1 (
 ) else (
 	..does not exist.
 )
-exit /B 0
+:: exit /B 0
 
 
 pause
