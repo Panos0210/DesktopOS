@@ -1,7 +1,4 @@
 @echo off
-echo This script should be run only as admin if you haven't opened this page as admin leave and reopen it as admin so it will work
-pause
-
 echo Installing All Tweaks...
  
 
