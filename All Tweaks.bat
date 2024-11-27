@@ -5,10 +5,10 @@ pause
 echo Installing All Tweaks...
  
 
-echo Installing Winget...
-Invoke-WebRequest -Uri https://aka.ms/getwinget -OutFile winget.msixbundle
-Add-AppxPackage .\winget.msixbundle
-rm winget.msixbundle
+# echo Installing Winget...
+# Invoke-WebRequest -Uri https://aka.ms/getwinget -OutFile winget.msixbundle
+# Add-AppxPackage .\winget.msixbundle
+# rm winget.msixbundle
 
 echo Disabling Automatic App Instalation...
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v "SilentInstalledAppsEnabled" /t REG_DWORD /d "0" /f
