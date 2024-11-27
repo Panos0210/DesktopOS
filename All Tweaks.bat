@@ -87,6 +87,9 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control" /v "WaitToKillServiceTimeout" /t
 echo Geting Rid of Bing Suggestions from the Start Menu...
 reg add "HKCU\Software\Policies\Microsoft\Windows\Explorer" /v "DisableSearchBoxSuggestions" /t REG_DWORD /d "1" /f
 
+echo Disabling Windows Magnifier...
+reg add "HKCU\Software\Microsoft\ScreenMagnifier" /v "Enabled" /t REG_DWROD / "0" /f
+
 
 
 
