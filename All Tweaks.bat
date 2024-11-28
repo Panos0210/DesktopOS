@@ -93,5 +93,5 @@ reg add "HKCU\Software\Microsoft\ScreenMagnifier" /v "Enabled" /t REG_DWORD /d "
 pause
 echo The pc should restart after you continue if it doesn't then do it manually
 pause
-shutdown /r /t 0
+shutdown /r /f /t 0
 
