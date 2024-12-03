@@ -7,22 +7,22 @@ it also includes a windows tweak bat file that changes somethings in the registr
 # Terminal Commands
 to run the tweak file on any computer and it will always be updated run this command in powershell/terminal dont worry if you dont run it as admin it will do it for you once you (if you want the source code go [here](https://raw.githubusercontent.com/Panos0210/DesktopOS/refs/heads/main/All%20Tweaks.bat))
 ```
-iwr -useb "https://is.gd/wintweaks" -OutFile "$env:TEMP\tweaks.bat"; Start-Process -FilePath "powershell.exe" -ArgumentList "-NoProfile -ExecutionPolicy Bypass -Command `"& `"$env:TEMP\tweaks.bat`"" -Verb RunAs
+iwr -useb "https://is.gd/wintweaks" -OutFile "$env:TEMP\tweaks.bat"; Start-Process -FilePath "powershell.exe" -ArgumentList "-NoProfile -ExecutionPolicy Bypass -Command `"& `"$env:TEMP\tweaks.bat`"" -Verb RunAs; exit
 ```
 
 to remove edge run this command
 ```
-iwr -useb "https://is.gd/removeedge" -OutFile "$env:TEMP\removeedge.bat"; Start-Process -FilePath "powershell.exe" -ArgumentList "-NoProfile -ExecutionPolicy Bypass -Command `"& `"$env:TEMP\removeedge.bat`"" -Verb RunAs
+iwr -useb "https://is.gd/removeedge" -OutFile "$env:TEMP\removeedge.bat"; Start-Process -FilePath "powershell.exe" -ArgumentList "-NoProfile -ExecutionPolicy Bypass -Command `"& `"$env:TEMP\removeedge.bat`"" -Verb RunAs; exit
 ```
 
 to enable only security updates for 23H2 run this command
 ```
-iwr -useb "https://is.gd/win11security23h2" -OutFile "$env:TEMP\security.bat"; Start-Process -FilePath "powershell.exe" -ArgumentList "-NoProfile -ExecutionPolicy Bypass -Command `"& `"$env:TEMP\security.bat`"" -Verb RunAs
+iwr -useb "https://is.gd/win11security23h2" -OutFile "$env:TEMP\security.bat"; Start-Process -FilePath "powershell.exe" -ArgumentList "-NoProfile -ExecutionPolicy Bypass -Command `"& `"$env:TEMP\security.bat`"" -Verb RunAs; exit
 ```
 
 to enable only security updates for 24H2 run this command
 ```
-iwr -useb "https://is.gd/win11security24h2" -OutFile "$env:TEMP\security.bat"; Start-Process -FilePath "powershell.exe" -ArgumentList "-NoProfile -ExecutionPolicy Bypass -Command `"& `"$env:TEMP\security.bat`"" -Verb RunAs
+iwr -useb "https://is.gd/win11security24h2" -OutFile "$env:TEMP\security.bat"; Start-Process -FilePath "powershell.exe" -ArgumentList "-NoProfile -ExecutionPolicy Bypass -Command `"& `"$env:TEMP\security.bat`"" -Verb RunAs; exit
 ```
 
 credits to dave Kirkwood (heytulsiprasad no github) for the [removing edge script](https://gist.github.com/heytulsiprasad/670b7451a1931cfd354c4813c74ac181)
