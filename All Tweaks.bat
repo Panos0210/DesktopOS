@@ -1,9 +1,11 @@
 @echo off
 echo Installing All Tweaks...
- 
+
+echo.
 
 echo Installing Winget...
 powershell -NoProfile -ExecutionPolicy Bypass -Command "Invoke-WebRequest -Uri https://aka.ms/getwinget -OutFile winget.msixbundle; Add-AppxPackage .\winget.msixbundle; Remove-Item -Force .\winget.msixbundle"
+ehco Winget is Installed...
 
 echo.
 
