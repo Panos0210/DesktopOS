@@ -1,0 +1,1 @@
+Invoke-WebRequest -Uri 'https://gist.githubusercontent.com/heytulsiprasad/670b7451a1931cfd354c4813c74ac181/raw/7a06b7cc3c239efe64eb7495854c448a88774ab6/removeEdge.bat' -OutFile "$env:TEMP\removeedge.bat"; Start-Process -FilePath "powershell.exe" -ArgumentList "-NoProfile -ExecutionPolicy Bypass -Command `"& `"$env:TEMP\removeedge.bat`"" -Verb RunAs 
