@@ -164,6 +164,10 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\edgeupdate" /v "ImagePath" /t RE
 
 echo.
 
+echo Disabling Fullscreen Optimizations...
+reg add "HKCU\System\GameConfigStore" /v "GameDVR_FSEBehavior" /t REG_DWORD /d "2" /f
+
+echo.
 
 pause
 echo The pc should restart after you continue if it doesn't then do it manually
