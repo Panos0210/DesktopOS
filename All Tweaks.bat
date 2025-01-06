@@ -206,4 +206,4 @@ echo The pc should restart after you continue if it doesn't then do it manually
 echo.
 
 pause
-shutdown /r /f /t 0
+shutdown /r /t 0 /f
