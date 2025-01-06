@@ -60,14 +60,16 @@ reg add "HKLM\SOFTWARE\Policies\Microsoft\Dsh" /v "AllowNewsAndInterests" /t REG
 
 echo.
 
-echo Enabling Hibrenation...
-   powercfg.exe /hibernate on
+echo Disabling Hibrenation...
+powercfg.exe /hibernate off
+reg add "HKLM\System\CurrentControlSet\Control\Session Manager\Power" /v "HibernateEnabled" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FlyoutMenuSettings" /v "ShowHibernateOption" /t REG_DWORD /d "0" /f
 
 echo.
 
 echo Enabling Ultimate Performace Powerplan...
 reg add "HKLM\System\CurrentControlSet\Control\Power" /v "PlatformAoAcOverride" /t REG_DWORD /d "0" /f
-   powercfg -duplicatescheme e9a42b02-d5df-448d-aa00-03f14749eb61
+powercfg -duplicatescheme e9a42b02-d5df-448d-aa00-03f14749eb61
 
 echo.
 
