@@ -1,4 +1,6 @@
 @echo off
+title Windows Tweaks
+
 echo Installing All Tweaks...
 
 echo.
