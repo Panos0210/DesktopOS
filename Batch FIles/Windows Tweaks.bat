@@ -21,7 +21,7 @@ echo 4) Remove Microsoft Edge
 echo 5) Exit
 set /p input=%BS% ^>
 
-if /I "%input%" EQU "1" start "" powershell -NoProfile -ExecutionPolicy Bypass -Command "irm https://rebrand.ly/tweaks | iex"
+if /I "%input%" EQU "1" start "" powershell -NoProfile -ExecutionPolicy Bypass -Command "irm https://rebrand.ly/alltweaks | iex"
 if /I "%input%" EQU "2" start "" powershell -NoProfile -ExecutionPolicy Bypass -Command "irm https://rebrand.ly/23H2 | iex"
 if /I "%input%" EQU "3" start "" powershell -NoProfile -ExecutionPolicy Bypass -Command "irm https://rebrand.ly/24H2 | iex"
 if /I "%input%" EQU "4" start "" powershell -NoProfile -ExecutionPolicy Bypass -Command "irm https://rebrand.ly/removeedge | iex"
