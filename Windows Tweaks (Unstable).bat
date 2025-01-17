@@ -7,7 +7,8 @@ exit
 chcp 65001 >nul
 mode con: cols=161 lines=45
 title Windows Tweaks - by panso
-goto :menu
+call :banner
+goto :options
 
 :menu
 cls
@@ -22,34 +23,14 @@ echo 3) Disable Updates to Only 24H2
 echo 4) Remove Microsoft Edge
 echo 5) Exit
 
-choice /C 12345 /N /M ">"
+choice /C 12345 /n /m ">"
 
-if errorlevel 5 goto :exit
-if errorlevel 4 goto :remove_edge
-if errorlevel 3 goto :disable_24H2
-if errorlevel 2 goto :disable_23H2
-if errorlevel 1 goto :all_tweaks
-
-goto :menu
-
-:all_tweaks
-start "" powershell -NoProfile -ExecutionPolicy Bypass -Command "irm https://rebrand.ly/alltweaks | iex"
-goto :menu
-
-:disable_23H2
-start "" powershell -NoProfile -ExecutionPolicy Bypass -Command "irm https://rebrand.ly/23H2 | iex"
-goto :menu
-
-:disable_24H2
-start "" powershell -NoProfile -ExecutionPolicy Bypass -Command "irm https://rebrand.ly/24H2 | iex"
-goto :menu
-
-:remove_edge
-start "" powershell -NoProfile -ExecutionPolicy Bypass -Command "irm https://rebrand.ly/removeedge | iex"
-goto :menu
-
-:exit
-exit
+if errorlevel 1 start "" powershell -NoProfile -ExecutionPolicy Bypass -Command "irm https://rebrand.ly/alltweaks | iex"
+if errorlevel 2 start "" powershell -NoProfile -ExecutionPolicy Bypass -Command "irm https://rebrand.ly/23H2 | iex"
+if errorlevel 3 start "" powershell -NoProfile -ExecutionPolicy Bypass -Command "irm https://rebrand.ly/24H2 | iex"
+if errorlevel 4 start "" powershell -NoProfile -ExecutionPolicy Bypass -Command "irm https://rebrand.ly/remove edge | iex"
+if errorlevel 5 exit
+goto :continue
 
 :banner
 
