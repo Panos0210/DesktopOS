@@ -19,7 +19,7 @@ echo 2) Disable Updates to Only 23H2
 echo 3) Disable Updates to Only 24H2
 echo 4) Remove Microsoft Edge
 echo 5) Exit
-set /p input=%BS% ^>
+set /p input=%BS% ^> 
 
 if /I "%input%" EQU "1" start "" powershell -NoProfile -ExecutionPolicy Bypass -Command "irm https://rebrand.ly/alltweaks | iex"
 if /I "%input%" EQU "2" start "" powershell -NoProfile -ExecutionPolicy Bypass -Command "irm https://rebrand.ly/23H2 | iex"
