@@ -1,1 +1,1 @@
-Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/Panos0210/DesktopOS/refs/heads/main/Batch%20FIles/Windows%20Tweaks.bat' -OutFile "$env:TEMP\tweaks.bat"; Start-Process -FilePath "powershell.exe" -ArgumentList "-NoProfile -ExecutionPolicy Bypass -File $env:TEMP\tweaks.bat"; exit
+Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/Panos0210/DesktopOS/refs/heads/main/Batch%20FIles/Windows%20Tweaks.bat' -OutFile "$env:TEMP\tweaks.bat"; Start-Process -FilePath "powershell.exe" -ArgumentList "-NoProfile -ExecutionPolicy Bypass -Command `& '$env:TEMP\tweaks.bat'"
