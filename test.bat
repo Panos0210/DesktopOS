@@ -37,4 +37,24 @@ start "" powershell -NoProfile -ExecutionPolicy Bypass -Command "irm https://reb
 goto :menu
 
 :disable_23H2
-start "" powershell -NoProfile -Execution
+start "" powershell -NoProfile -ExecutionPolicy Bypass -Command "irm https://rebrand.ly/23H2 | iex"
+goto :menu
+
+:disable_24H2
+start "" powershell -NoProfile -ExecutionPolicy Bypass -Command "irm https://rebrand.ly/24H2 | iex"
+goto :menu
+
+:remove_edge
+start "" powershell -NoProfile -ExecutionPolicy Bypass -Command "irm https://rebrand.ly/removeedge | iex"
+goto :menu
+
+:exit
+exit
+
+:banner
+echo.
+echo.
+echo                               ,,                    ,,                                                                                                    
+echo         `7MMF'     A     `7MF'db                  `7MM                                       MMP""MM""YMM                               `7MM              
+echo           `MA     ,MA     ,V                        MM                                       P'   MM   `7                                 MM              
+echo
