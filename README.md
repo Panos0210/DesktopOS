@@ -5,9 +5,15 @@ this is a lightweight version of windows made by me with the ntlite config file 
 it also includes a windows tweak bat file that changes somethings in the registry and improve windows 11 (it also automatically installs winget if for some reason isnt installed by default)
 
 # Terminal Commands
-to run the tweak file on any computer and it will always be updated run this command in powershell/terminal dont worry if you dont run it as admin it will do it for you once you (if you want the source code go [here](https://raw.githubusercontent.com/Panos0210/DesktopOS/refs/heads/main/All%20Tweaks.bat))
+for the multitool with all the commands in one place paste this
 ```
-iwr 'https://rebrand.ly/tweaks' | iex
+irm 'https://rebrand.ly/tweaks' | iex
+```
+the source code of all the batch fikles can be found [here](https://github.com/Panos0210/DesktopOS/tree/main/Batch%20FIles)
+# Individual Batch Files Commands
+only for tweaks
+```
+iwr 'https://rebrand.ly/alltweaks' | iex
 ```
 
 to remove edge run this command
