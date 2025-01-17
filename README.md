@@ -13,7 +13,7 @@ the source code of all the batch fikles can be found [here](https://github.com/P
 # Individual Batch Files Commands
 only for tweaks
 ```
-iwr 'https://rebrand.ly/tweaks' | iex
+iwr 'https://rebrand.ly/alltweaks' | iex
 ```
 
 to remove edge run this command
