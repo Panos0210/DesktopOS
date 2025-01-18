@@ -16,12 +16,14 @@ echo 1) All Windows Tweaks
 echo 2) Disable Updates to Only 23H2
 echo 3) Disable Updates to Only 24H2
 echo 4) Remove Microsoft Edge
-echo 5) Exit
+echo 5) System Corruption Scan
+echo 6) Exit
 
-choice /C 12345 /N /M ">"
+choice /C 123456 /N /M ">"
 set _erl=%errorlevel%
 
-if %_erl%==5 exit /b
+if %_erl%==6 exit /b
+if %_erl%==5 setlocal & start "" powershell -NoProfile -ExecutionPolicy Bypass -Command "chdisk /scan; sfc /scannow; DISM /Online /Cleanup-Image /RestoreHealth; sfc /scannow" -Verb RunAs
 if %_erl%==4 setlocal & start "" powershell -NoProfile -ExecutionPolicy Bypass -Command "irm https://rebrand.ly/remove edge | iex"
 if %_erl%==3 setlocal & start "" powershell -NoProfile -ExecutionPolicy Bypass -Command "irm https://rebrand.ly/24H2 | iex"
 if %_erl%==2 setlocal & start "" powershell -NoProfile -ExecutionPolicy Bypass -Command "irm https://rebrand.ly/23H2 | iex"
