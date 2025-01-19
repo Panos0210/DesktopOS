@@ -22,7 +22,7 @@ echo 6) Update All Apps (Requires WinGet)
 choice /C:1234560 /N ">"
 set _erl=%errorlevel%
 
-if %_erl%==11 exit /b
+if %_erl%==7 exit /b
 if %_erl%==6 setlocal & start "" powershell -NoProfile -ExecutionPolicy Bypass -Command "winget update --all"
 if %_erl%==5 setlocal & start "" powershell -NoProfile -ExecutionPolicy Bypass -Command "Write-Host 'Running Chkdsk (1/4)' -ForegroundColor Green; chkdsk /scan; Write-Host 'Running 1st SFC scan (2/4)' -ForegroundColor Green; sfc /scannow; Write-Host 'Running DISM (3/4)' -ForegroundColor Green; DISM /Online /Cleanup-Image /RestoreHealth; Write-Host 'Running 2nd SFC scan (4/4)' -ForegroundColor Green; sfc /scannow; pause"
 if %_erl%==4 setlocal & start "" powershell -NoProfile -ExecutionPolicy Bypass -Command "irm https://rebrand.ly/removeedge | iex"
