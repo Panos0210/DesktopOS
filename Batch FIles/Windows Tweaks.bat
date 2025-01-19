@@ -19,7 +19,7 @@ echo 3) Disable Updates to Only 24H2
 echo 4) Remove Microsoft Edge
 echo 5) System Corruption Scan
 echo 6) Update All Apps (Requires WinGet)
-choice /C:1234560 /N ">"
+choice /C:1234560 /N /M ">"
 set _erl=%errorlevel%
 
 if %_erl%==7 exit /b
