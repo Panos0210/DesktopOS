@@ -20,7 +20,7 @@ echo 4) Remove Microsoft Edge
 echo 5) System Corruption Scan
 echo 6) Install WinGet
 echo 7) Update All Apps (Requires WinGet)
-choice /C:123456780 /N /M ">"
+choice /C:12345670 /N /M ">"
 set _erl=%errorlevel%
 
 if %_erl%==8 exit /b
