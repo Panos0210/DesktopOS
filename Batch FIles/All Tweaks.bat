@@ -26,6 +26,11 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "S
 
 echo.
 
+echo Disabling Recall...
+DISM /Online /Disable-Feature /FeatureName:Recall
+
+echo.
+
 echo Disabling Shortcut Arrow...
 reg add "HKLM\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Icons" /v "29" /t REG_SZ /d " " /f
 
