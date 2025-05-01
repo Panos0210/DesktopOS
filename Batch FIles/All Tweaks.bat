@@ -31,11 +31,6 @@ DISM /Online /Disable-Feature /FeatureName:Recall
 
 echo.
 
-echo Disabling Shortcut Arrow...
-reg add "HKLM\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Icons" /v "29" /t REG_SZ /d " " /f
-
-echo.
-
 echo Disabling "- Shortcut" on Shortcuts...
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer" /v "link" /t REG_BINARY /d "00000000" /f
 
