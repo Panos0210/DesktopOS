@@ -31,7 +31,7 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\PriorityControl" /v "Win32Priorit
 echo.
 
 echo Disabling Network Throttling...
-reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile" /v "NetworkThrottlingIndex" /t REG_DWORD /d "ffffffff" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile" /v "NetworkThrottlingIndex" /t REG_DWORD /d 0xffffffff /f
 echo.
 
 echo Setting System Responsiveness to 0...
