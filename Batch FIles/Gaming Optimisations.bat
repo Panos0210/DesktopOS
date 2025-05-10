@@ -41,5 +41,6 @@ echo.
 
 echo Ultimate Performance Plan...
 powershell -NoProfile -ExecutionPolicy Bypass -Command "irm https://raw.githubusercontent.com/ChrisTitusTech/winutil/refs/heads/main/functions/public/Invoke-WPFUltimatePerformance.ps1 | iex"
+echo.
 
 pause
