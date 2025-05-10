@@ -58,12 +58,6 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FlyoutMenuSetti
 
 echo.
 
-echo Enabling Ultimate Performace Powerplan...
-reg add "HKLM\System\CurrentControlSet\Control\Power" /v "PlatformAoAcOverride" /t REG_DWORD /d "0" /f
-powercfg -duplicatescheme e9a42b02-d5df-448d-aa00-03f14749eb61
-
-echo.
-
 echo Disabling Power Throttling...
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power\PowerThrottling" /v "PowerThrottlingOff" /t REG_DWORD /d "1" /f
 
