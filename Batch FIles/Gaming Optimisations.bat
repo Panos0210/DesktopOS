@@ -39,4 +39,7 @@ echo Setting System Responsiveness to 0...
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile" /v "SystemResponsiveness" /t REG_DWORD /d "0" /f
 echo.
 
+echo Ultimate Performance Plan...
+powershell -NoProfile -ExecutionPolicy Bypass -Command "irm https://raw.githubusercontent.com/ChrisTitusTech/winutil/refs/heads/main/functions/public/Invoke-WPFUltimatePerformance.ps1 | iex"
+
 pause
