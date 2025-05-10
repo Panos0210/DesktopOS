@@ -15,8 +15,8 @@ goto :options
 echo 0) Exit
 echo 1) All Windows Tweaks
 echo 2) Debloat Windows
-echo 3) Set Windows Updates to Default
-echo 4) Disable Feature Updates (Recommended)
+echo 3) Set Windows Updates to Default (Requires restart)
+echo 4) Disable Feature Updates (Recommended, requires restart)
 echo 5) Remove Microsoft Edge
 echo 6) System Corruption Scan
 echo 7) Install WinGet
