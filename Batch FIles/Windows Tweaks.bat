@@ -62,7 +62,6 @@ goto :menu
 :updates
 cls
 call :updateoptions
-goto :updates
 
 :banner
 echo.
