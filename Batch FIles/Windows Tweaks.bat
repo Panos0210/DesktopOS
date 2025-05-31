@@ -10,6 +10,11 @@ title Windows Tweaks - by panso
 call :banner
 goto :options
 
+:continueupdates
+chcp 65001 >nul
+mode con: cols=161 lines=45
+title Windows Tweaks - by panso
+goto :updateoptions
 
 :options
 echo 0) Exit
@@ -42,7 +47,8 @@ echo 1) Set Windows Updates to Default
 echo 2) Set Windows Updates to Security Only (recommended)
 echo 3) Set Windows updates to Disable all (not recommended)
 
-goto :continue
+goto :continueupdates
+
 
 :menu
 cls
