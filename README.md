@@ -21,14 +21,5 @@ to remove edge run this command
 iwr 'https://rebrand.ly/removeedge' | iex
 ```
 
-to enable only security updates for 23H2 run this command
-```
-iwr 'https://rebrand.ly/23H2' | iex
-```
 
-to enable only security updates for 24H2 run this command
-```
-iwr 'https://rebrand.ly/24H2' | iex
-```
-
-credits to dave Kirkwood (heytulsiprasad no github) for the [removing edge script](https://gist.github.com/heytulsiprasad/670b7451a1931cfd354c4813c74ac181)
+credits to Dave Kirkwood (heytulsiprasad no github) for the [removing edge script](https://gist.github.com/heytulsiprasad/670b7451a1931cfd354c4813c74ac181) and ChrisTitus for some of his code from his util since thats what inspired me to make my own to have only the tweaks that i want
