@@ -45,7 +45,7 @@ if %_erl%==4 setlocal & goto :continue
 if %_erl%==3 setlocal & start "" powershell -NoProfile -ExecutionPolicy Bypass -Command "irm https://raw.githubusercontent.com/ChrisTitusTech/winutil/refs/heads/main/functions/public/Invoke-WPFUpdatesdisable.ps1 | iex" & goto :updateoptions
 if %_erl%==2 setlocal & start "" powershell -NoProfile -ExecutionPolicy Bypass -Command "irm https://raw.githubusercontent.com/ChrisTitusTech/winutil/refs/heads/main/functions/public/Invoke-WPFUpdatessecurity.ps1 | iex" & goto :updateoptions
 if %_erl%==1 setlocal & start "" powershell -NoProfile -ExecutionPolicy Bypass -Command "irm https://raw.githubusercontent.com/ChrisTitusTech/winutil/refs/heads/main/functions/public/Invoke-WPFUpdatesdefault.ps1 | iex" & goto :updateoptions
-
+goto :updateoptions
 
 :menu
 cls
