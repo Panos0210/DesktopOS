@@ -40,7 +40,6 @@ if %_erl%==1 setlocal & start "" powershell -NoProfile -ExecutionPolicy Bypass -
 goto :continue
 
 :updateoptions
-call :updatebanner
 echo 0) Back
 echo 1) Set Windows Updates to Default
 echo 2) Set Windows Updates to Security Only (recommended)
@@ -62,23 +61,7 @@ call :options
 goto :menu
 
 
-:updatebanner
-echo.
-echo.
-echo 
-echo    888       888 d8b               888                                      888     888               888          888                     
-echo    888   o   888 Y8P               888                                      888     888               888          888                     
-echo    888  d8b  888                   888                                      888     888               888          888                     
-echo    888 d888b 888 888 88888b.   .d88888  .d88b.  888  888  888 .d8888b       888     888 88888b.   .d88888  8888b.  888888 .d88b.  .d8888b  
-echo    888d88888b888 888 888 "88b d88" 888 d88""88b 888  888  888 88K           888     888 888 "88b d88" 888     "88b 888   d8P  Y8b 88K      
-echo    88888P Y88888 888 888  888 888  888 888  888 888  888  888 "Y8888b.      888     888 888  888 888  888 .d888888 888   88888888 "Y8888b. 
-echo    8888P   Y8888 888 888  888 Y88b 888 Y88..88P Y88b 888 d88P      X88      Y88b. .d88P 888 d88P Y88b 888 888  888 Y88b. Y8b.          X88 
-echo    888P     Y888 888 888  888  "Y88888  "Y88P"   "Y8888888P"   88888P'       "Y88888P"  88888P"   "Y88888 "Y888888  "Y888 "Y8888   88888P' 
-echo                                                                                         888                                                
-echo                                                                                         888                                                
-echo                                                                                         888                                                
-echo.
-echo.
+
 
 
 :banner
