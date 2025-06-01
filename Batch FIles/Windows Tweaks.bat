@@ -10,11 +10,6 @@ title Windows Tweaks - by panso
 call :banner
 goto :options
 
-:continueupdates
-chcp 65001 >nul
-mode con: cols=161 lines=45
-title Windows Tweaks - by panso
-goto :updateoptions
 
 :options
 echo 0) Exit
@@ -52,16 +47,12 @@ if %_erl%==3 start "" powershell -NoProfile -ExecutionPolicy Bypass -Command "ir
 if %_erl%==2 start "" powershell -NoProfile -ExecutionPolicy Bypass -Command "irm https://raw.githubusercontent.com/ChrisTitusTech/winutil/refs/heads/main/functions/public/Invoke-WPFUpdatessecurity.ps1 | iex"
 if %_erl%==1 start "" powershell -NoProfile -ExecutionPolicy Bypass -Command "irm https://raw.githubusercontent.com/ChrisTitusTech/winutil/refs/heads/main/functions/public/Invoke-WPFUpdatesdefault.ps1 | iex"
 
-goto :continueupdates
 
 :menu
 cls
 call :banner
 call :options
 goto :menu
-
-
-
 
 
 :banner
