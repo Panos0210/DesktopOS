@@ -33,13 +33,14 @@ if %_erl%==7 setlocal & start "" powershell -NoProfile -ExecutionPolicy Bypass -
 if %_erl%==6 setlocal & start "" powershell -NoProfile -ExecutionPolicy Bypass -Command "Add-AppxPackage -RegisterByFamilyName -MainPackage Microsoft.DesktopAppInstaller_8wekyb3d8bbwe"
 if %_erl%==5 setlocal & start "" powershell -NoProfile -ExecutionPolicy Bypass -Command "Write-Host 'Running Chkdsk (1/4)' -ForegroundColor Green; chkdsk /scan; Write-Host 'Running 1st SFC scan (2/4)' -ForegroundColor Green; sfc /scannow; Write-Host 'Running DISM (3/4)' -ForegroundColor Green; DISM /Online /Cleanup-Image /RestoreHealth; Write-Host 'Running 2nd SFC scan (4/4)' -ForegroundColor Green; sfc /scannow; pause"
 if %_erl%==4 setlocal & start "" powershell -NoProfile -ExecutionPolicy Bypass -Command "irm https://rebrand.ly/removeedge | iex"
-if %_erl%==3 setlocal & cls; goto :updates
+if %_erl%==3 setlocal & cls; goto :updateoptions
 if %_erl%==2 setlocal & start "" powershell -NoProfile -ExecutionPolicy Bypass -Command "irm https://rebrand.ly/windebloat | iex"
 if %_erl%==1 setlocal & start "" powershell -NoProfile -ExecutionPolicy Bypass -Command "irm https://rebrand.ly/alltweaks | iex"
 
 goto :continue
 
 :updateoptions
+call :updatebanner
 echo 0) Back
 echo 1) Set Windows Updates to Default
 echo 2) Set Windows Updates to Security Only (recommended)
@@ -60,10 +61,6 @@ call :banner
 call :options
 goto :menu
 
-:updates
-cls
-call :updatebanner
-goto :updateoptions
 
 :updatebanner
 echo.
