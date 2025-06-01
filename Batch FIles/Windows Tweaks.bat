@@ -34,6 +34,7 @@ if %_erl%==1 setlocal & start "" powershell -NoProfile -ExecutionPolicy Bypass -
 
 
 :updateoptions
+cls
 echo 0) Back
 echo 1) Set Windows Updates to Default
 echo 2) Set Windows Updates to Security Only (recommended)
