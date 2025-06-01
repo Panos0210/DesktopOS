@@ -25,7 +25,7 @@ echo 4) Remove Microsoft Edge
 echo 5) System Corruption Scan
 echo 6) Install WinGet
 echo 7) Update All Apps (Requires WinGet)
-choice /C:123456780 /N /M ">"
+choice /C:12345670 /N /M ">"
 set _erl=%errorlevel%
 
 if %_erl%==8 exit /b
@@ -44,6 +44,8 @@ echo 0) Back
 echo 1) Set Windows Updates to Default
 echo 2) Set Windows Updates to Security Only (recommended)
 echo 3) Set Windows updates to Disable all (not recommended)
+choice /C:1230 /N /M ">"
+set _erl=%errorlevel%
 
 if %_erl%==4 goto :continue
 if %_erl%==3 start "" powershell -NoProfile -ExecutionPolicy Bypass -Command "irm https://raw.githubusercontent.com/ChrisTitusTech/winutil/refs/heads/main/functions/public/Invoke-WPFUpdatesdisable.ps1 | iex"
@@ -51,7 +53,6 @@ if %_erl%==2 start "" powershell -NoProfile -ExecutionPolicy Bypass -Command "ir
 if %_erl%==1 start "" powershell -NoProfile -ExecutionPolicy Bypass -Command "irm https://raw.githubusercontent.com/ChrisTitusTech/winutil/refs/heads/main/functions/public/Invoke-WPFUpdatesdefault.ps1 | iex"
 
 goto :continueupdates
-
 
 :menu
 cls
