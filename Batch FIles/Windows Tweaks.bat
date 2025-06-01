@@ -33,7 +33,7 @@ if %_erl%==7 setlocal & start "" powershell -NoProfile -ExecutionPolicy Bypass -
 if %_erl%==6 setlocal & start "" powershell -NoProfile -ExecutionPolicy Bypass -Command "Add-AppxPackage -RegisterByFamilyName -MainPackage Microsoft.DesktopAppInstaller_8wekyb3d8bbwe"
 if %_erl%==5 setlocal & start "" powershell -NoProfile -ExecutionPolicy Bypass -Command "Write-Host 'Running Chkdsk (1/4)' -ForegroundColor Green; chkdsk /scan; Write-Host 'Running 1st SFC scan (2/4)' -ForegroundColor Green; sfc /scannow; Write-Host 'Running DISM (3/4)' -ForegroundColor Green; DISM /Online /Cleanup-Image /RestoreHealth; Write-Host 'Running 2nd SFC scan (4/4)' -ForegroundColor Green; sfc /scannow; pause"
 if %_erl%==4 setlocal & start "" powershell -NoProfile -ExecutionPolicy Bypass -Command "irm https://rebrand.ly/removeedge | iex"
-if %_erl%==3 setlocal & cls; goto :updateoptions
+if %_erl%==3 setlocal & cls; goto :updates
 if %_erl%==2 setlocal & start "" powershell -NoProfile -ExecutionPolicy Bypass -Command "irm https://rebrand.ly/windebloat | iex"
 if %_erl%==1 setlocal & start "" powershell -NoProfile -ExecutionPolicy Bypass -Command "irm https://rebrand.ly/alltweaks | iex"
 
@@ -62,6 +62,7 @@ goto :menu
 
 :updates
 cls
+call :updatebanner
 call :updateoptions
 goto :updates
 
@@ -78,3 +79,23 @@ echo              :MM;    :MM;     MM    MM    MM `Mb    MM YA.   ,A9   VVV    V
 echo               VF      VF    .JMML..JMML  JMML.`Wbmd"MML.`Ybmd9'     W      W     M9mmmP'        .JMML.    W      W     `Mbmmd' `Moo9^Yo..JMML. YA.M9mmmP' 
 echo.
 echo.
+
+
+:updatebanner
+echo.
+echo.
+echo 
+echo    888       888 d8b               888                                      888     888               888          888                     
+echo    888   o   888 Y8P               888                                      888     888               888          888                     
+echo    888  d8b  888                   888                                      888     888               888          888                     
+echo    888 d888b 888 888 88888b.   .d88888  .d88b.  888  888  888 .d8888b       888     888 88888b.   .d88888  8888b.  888888 .d88b.  .d8888b  
+echo    888d88888b888 888 888 "88b d88" 888 d88""88b 888  888  888 88K           888     888 888 "88b d88" 888     "88b 888   d8P  Y8b 88K      
+echo    88888P Y88888 888 888  888 888  888 888  888 888  888  888 "Y8888b.      888     888 888  888 888  888 .d888888 888   88888888 "Y8888b. 
+echo    8888P   Y8888 888 888  888 Y88b 888 Y88..88P Y88b 888 d88P      X88      Y88b. .d88P 888 d88P Y88b 888 888  888 Y88b. Y8b.          X88 
+echo    888P     Y888 888 888  888  "Y88888  "Y88P"   "Y8888888P"   88888P'       "Y88888P"  88888P"   "Y88888 "Y888888  "Y888 "Y8888   88888P' 
+echo                                                                                         888                                                
+echo                                                                                         888                                                
+echo                                                                                         888                                                
+echo.
+echo.
+
