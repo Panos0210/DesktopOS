@@ -20,7 +20,7 @@ powershell -NoProfile -ExecutionPolicy Bypass -Command "irm https://raw.githubus
 
 echo.
 
-echo Geting Rid of Bing Suggestions from the Start Menu...
+echo Getting Rid of Bing Suggestions from the Start Menu...
 reg add "HKCU\Software\Policies\Microsoft\Windows\Explorer" /v "DisableSearchBoxSuggestions" /t REG_DWORD /d "1" /f
 
 echo.
