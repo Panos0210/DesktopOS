@@ -20,10 +20,12 @@ echo 4) Remove Microsoft Edge
 echo 5) System Corruption Scan
 echo 6) Install WinGet
 echo 7) Update All Apps (Requires WinGet)
-choice /C:12345670 /N /M ">"
+echo 8) Fix "Get an app to open ms-gamebar" error
+choice /C:123456780 /N /M ">"
 set _erl=%errorlevel%
 
-if %_erl%==8 exit /b
+if %_erl%==9 exit /b
+if %_erl%==8 setlocal & start "" powershell -NoProfile -ExecutionPolicy Bypass -Command "irm https://raw.githubusercontent.com/AveYo/Gaming/refs/heads/main/ms-gamebar-annoyance.bat | iex" & goto :continue
 if %_erl%==7 setlocal & start "" powershell -NoProfile -ExecutionPolicy Bypass -Command "winget upgrade --all; pause" & goto :continue
 if %_erl%==6 setlocal & start "" powershell -NoProfile -ExecutionPolicy Bypass -Command "Add-AppxPackage -RegisterByFamilyName -MainPackage Microsoft.DesktopAppInstaller_8wekyb3d8bbwe" & goto :continue
 if %_erl%==5 setlocal & start "" powershell -NoProfile -ExecutionPolicy Bypass -Command "Write-Host 'Running Chkdsk (1/4)' -ForegroundColor Green; chkdsk /scan; Write-Host 'Running 1st SFC scan (2/4)' -ForegroundColor Green; sfc /scannow; Write-Host 'Running DISM (3/4)' -ForegroundColor Green; DISM /Online /Cleanup-Image /RestoreHealth; Write-Host 'Running 2nd SFC scan (4/4)' -ForegroundColor Green; sfc /scannow; pause" & goto :continue
