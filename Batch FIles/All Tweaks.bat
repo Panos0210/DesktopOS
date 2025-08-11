@@ -119,7 +119,7 @@ reg add "HKCU\Software\Microsoft\ScreenMagnifier" /v "Enabled" /t REG_DWORD /d "
 echo.
 
 echo Enabling Simplified Quick Settings...
-reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\" /v "SimplifyQuickSettings" /t REG_DWORD /d "1" /f
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Explorer" /v "SimplifyQuickSettings" /t REG_DWORD /d "1" /f
 
 echo.
 
