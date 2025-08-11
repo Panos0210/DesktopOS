@@ -7,7 +7,7 @@ echo.
 
 echo Disabling Start Menu Recommendations...
 reg add "HKLM\SOFTWARE\Microsoft\PolicyManager\current\device\Start" /v HideRecommendedSection /t REG_DWORD /d "1" /f
-reg add "HKLM\SOFTWARE\Microsoft\PolicyManager\current\Education" /v IsEducationEnvironment /t REG_DWORD /d "1" /f
+reg add "HKLM\SOFTWARE\Microsoft\PolicyManager\current\device\Education" /v IsEducationEnvironment /t REG_DWORD /d "1" /f
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Explorer" /v HideRecommendedSection /t REG_DWORD /d "1" /f
 
 echo.
