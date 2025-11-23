@@ -21,5 +21,5 @@ to remove edge run this command
 iwr 'https://rebrand.ly/removeedge' | iex
 ```
 
-
+# Credits
 credits to Dave Kirkwood (heytulsiprasad no github) for the [removing edge script](https://gist.github.com/heytulsiprasad/670b7451a1931cfd354c4813c74ac181) and ChrisTitus for some of his code from his tweaks from his util since thats what inspired me to make my own to have only the tweaks that i want. also WinAero Tweakeras there are some tweaks from them too
