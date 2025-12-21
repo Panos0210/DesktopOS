@@ -7,18 +7,18 @@ it also includes a windows tweak bat file that changes somethings in the registr
 # Terminal Commands
 for the multitool with all the commands in one place paste this
 ```
-irm 'https://rebrand.ly/tweaks' | iex
+irm 'https://spoo.me/tweaks' | iex
 ```
 the source code of all the batch fikles can be found [here](https://github.com/Panos0210/DesktopOS/tree/main/Batch%20FIles)
 # Individual Batch Files Commands
 only for tweaks
 ```
-iwr 'https://rebrand.ly/alltweaks' | iex
+iwr 'https://spoo.me/alltweaks' | iex
 ```
 
 to remove edge run this command
 ```
-iwr 'https://rebrand.ly/removeedge' | iex
+iwr 'https://spoo.me/removeedge' | iex
 ```
 
 # Credits
