@@ -1,4 +1,5 @@
 @echo off
+title Windows Debloat
 
 echo Debloating Windows...
 
