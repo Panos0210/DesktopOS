@@ -47,7 +47,7 @@ echo             Gaming Options
 echo ============================================
 echo.
 echo 0) Back
-echo 1) Apply Gaming Optimizations
+echo 1) Gaming Optimizations
 echo 2) Hardcore Performance Optimizations
 echo 3) Fix "Get an app to open ms-gamebar" error
 echo.
