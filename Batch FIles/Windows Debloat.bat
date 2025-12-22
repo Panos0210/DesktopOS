@@ -51,5 +51,9 @@ netsh advfirewall firewall add rule name="Disable Edge Updates" dir=out action=b
 
 echo.
 
-echo Done
+echo.
+echo ============================================
+echo       Windows Debloat Complete!
+echo ============================================
+echo.
 pause
