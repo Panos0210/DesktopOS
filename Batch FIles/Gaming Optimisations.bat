@@ -39,14 +39,14 @@ echo Setting System Responsiveness to 0...
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile" /v "SystemResponsiveness" /t REG_DWORD /d "0" /f
 echo.
 
-echo Ultimate Performance Plan...
+echo Enabling Ultimate Performance Power Plan...
 powercfg -list | findstr /C:"Ultimate Performance" >nul
 if %errorlevel% neq 0 (
-    powercfg -duplicatescheme e9a42b02-d5df-448d-aa00-03f14749eb61
+    powercfg -duplicatescheme e9a42b02-d5df-448d-aa00-03f14749eb61 >nul
 )
 for /f "tokens=4" %%a in ('powercfg -list ^| findstr /C:"Ultimate Performance"') do set "ultimatePlanGUID=%%a"
 powercfg -setactive %ultimatePlanGUID%
-
+echo Ultimate Performance Power Plan activated!
 echo.
 
 pause
