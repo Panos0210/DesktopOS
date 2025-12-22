@@ -1,3 +1,4 @@
+<img width="1612" height="752" alt="image" src="https://github.com/user-attachments/assets/af5c5f5a-b053-428b-983b-d6a11f4d2b77" />
 # DesktopOS my own Windows 11 iso 
 
 this is a lightweight version of windows made by me with the ntlite config file so if you dont trust the .iso file (which you shouldnt trust files from strangers) if you have ntlite you can make it yourself
