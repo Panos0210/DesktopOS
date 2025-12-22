@@ -40,7 +40,11 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProf
 echo.
 
 echo Ultimate Performance Plan...
-powershell -NoProfile -ExecutionPolicy Bypass -Command "powercfg -duplicatescheme e9a42b02-d5df-448d-aa00-03f14749eb61; $ultimatePlanGUID = (powercfg -list | Select-String -Pattern 'Ultimate Performance').Line.Split()[3]; powercfg -setactive $ultimatePlanGUID"
-echo.
+powercfg -list | findstr /C:"Ultimate Performance" >nul
+if %errorlevel% neq 0 (
+    powercfg -duplicatescheme e9a42b02-d5df-448d-aa00-03f14749eb61
+)
+for /f "tokens=4" %%a in ('powercfg -list ^| findstr /C:"Ultimate Performance"') do set "ultimatePlanGUID=%%a"
+powercfg -setactive %ultimatePlanGUID%echo.
 
 pause
