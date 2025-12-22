@@ -1,4 +1,5 @@
 @echo off
+title Gaming Optimizations
 
 echo Adding Gaming Optimizations...
 echo.
