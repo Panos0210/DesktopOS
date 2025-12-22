@@ -40,7 +40,7 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProf
 echo.
 
 echo Ultimate Performance Plan...
-powershell -NoProfile -ExecutionPolicy Bypass -Command "irm https://raw.githubusercontent.com/ChrisTitusTech/winutil/refs/heads/main/functions/public/Invoke-WPFUltimatePerformance.ps1 | iex"
+powershell -NoProfile -ExecutionPolicy Bypass -Command "powercfg -duplicatescheme e9a42b02-d5df-448d-aa00-03f14749eb61; $ultimatePlanGUID = (powercfg -list | Select-String -Pattern 'Ultimate Performance').Line.Split()[3]; powercfg -setactive $ultimatePlanGUID"
 echo.
 
 pause
