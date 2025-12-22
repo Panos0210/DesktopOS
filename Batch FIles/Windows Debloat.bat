@@ -2,7 +2,6 @@
 title Windows Debloat
 
 echo Debloating Windows...
-
 echo.
 
 echo Disabling Copilot...
