@@ -49,4 +49,9 @@ powercfg -setactive %ultimatePlanGUID%
 echo Ultimate Performance Power Plan activated!
 echo.
 
+echo.
+echo ============================================
+echo    All Gaming Optimizations Applied!
+echo ============================================
+echo.
 pause
