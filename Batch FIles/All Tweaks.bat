@@ -150,6 +150,11 @@ echo.
 echo Disabling Consumer Features...
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\CloudContent" /v DisableWindowsConsumerFeatures /t REG_DWORD /d 1 /f
 
+echo Disabling Sticky Keys...
+reg add "HKCU\Control Panel\Accessibility\StickyKeys" /v "Flags" /t REG_DWORD /d 58 /f
+
+echo.
+
 pause
 echo The pc should restart after you continue if it doesn't then do it manually
 
