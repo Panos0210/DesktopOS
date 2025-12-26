@@ -30,7 +30,7 @@ if %_erl%==1 exit /b
 if %_erl%==2 start "" powershell -NoProfile -ExecutionPolicy Bypass -Command "irm https://spoo.me/alltweaks | iex" & goto :continue
 if %_erl%==3 start "" powershell -NoProfile -ExecutionPolicy Bypass -Command "irm https://spoo.me/debloat | iex" & goto :continue
 if %_erl%==4 cls & goto :gamingoptions
-if %_erl%==5 start "" powershell -NoProfile -ExecutionPolicy Bypass -Command "irm https://spoo.me/privacy | iex" & goto :continue
+if %_erl%==5 start "" powershell -NoProfile -ExecutionPolicy Bypass -Command "irm https://spoo.me/privacytweaks | iex" & goto :continue
 if %_erl%==6 cls & goto :updateoptions
 if %_erl%==7 cls & goto :dnsoptions
 if %_erl%==8 start "" powershell -NoProfile -ExecutionPolicy Bypass -Command "irm https://spoo.me/removeedge | iex" & goto :continue
@@ -195,5 +195,6 @@ echo              :MM;    :MM;     MM    MM    MM `Mb    MM YA.   ,A9   VVV    V
 echo               VF      VF    .JMML..JMML  JMML.`Wbmd"MML.`Ybmd9'     W      W     M9mmmP'        .JMML.    W      W     `Mbmmd' `Moo9^Yo..JMML. YA.M9mmmP' 
 echo.
 echo.
+
 
 
