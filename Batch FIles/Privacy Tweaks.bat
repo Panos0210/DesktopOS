@@ -1,4 +1,4 @@
-@echo off
+@echooff
 title Privacy Tweaks
 
 echo Applying Privacy Tweaks...
