@@ -1,0 +1,1 @@
+Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/Panos0210/DesktopOS/refs/heads/main/Batch%20FIles/Privacy%20Tweaks.bat' -OutFile "$env:TEMP\alltweaks.bat"; Start-Process -FilePath "powershell.exe" -ArgumentList "-NoProfile -ExecutionPolicy Bypass -Command `"& `"$env:TEMP\alltweaks.bat`"" -Verb RunAs
